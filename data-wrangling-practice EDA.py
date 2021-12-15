@@ -1,4 +1,4 @@
-# Firstly, we import Numpy and pandas library and then read the dataset.
+# First, we import Numpy and pandas library and then read the dataset.
 import numpy as np
 import pandas as pd
 

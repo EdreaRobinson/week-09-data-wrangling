@@ -2,38 +2,38 @@ import numpy as np
 import pandas as pd
 
 df=pd.read_csv('Mobile_Food_Facility_Permit.csv')
-# print(df.head())
+print(df.head())
 
 # ############ SELECTING AND INDEXING ###############
 
 # BASICS
 
-# print(df['Applicant'])
-# print(df['Applicant'][44])
-# print(df.Applicant) #don't use this syntax
+print(df['Applicant'])
+print(df['Applicant'][44])
+print(df.Applicant) #don't use this syntax
 #
 dft = df.T
-# print(dft)
-# print(dft.columns)
-# print(dft[44])
-# print(dft[44]['FoodItems'])
+print(dft)
+print(dft.columns)
+print(dft[44])
+print(dft[44]['FoodItems'])
 
 # INDEXING WITH LISTS AND SLICES
 
-# print(df[['Applicant', 'Address', 'FoodItems']])
-# print(df['FoodItems'][[1,9,24,25,44,444]])
-#
-# print(df[100:106])
-# print(df[100:106][['Applicant', 'Address', 'FoodItems']])
-#
-# print(df[607:])
-# print(df[607:][['Applicant', 'Address', 'FoodItems']])
-#
-# print(df['Location'])
-# print(df['Location'][:20])
-#
-# print(dft[:44])
-# print(dft['Address':'FoodItems'])
+print(df[['Applicant', 'Address', 'FoodItems']])
+print(df['FoodItems'][[1,9,24,25,44,444]])
+
+print(df[100:106])
+print(df[100:106][['Applicant', 'Address', 'FoodItems']])
+
+print(df[607:])
+print(df[607:][['Applicant', 'Address', 'FoodItems']])
+
+print(df['Location'])
+print(df['Location'][:20])
+
+print(dft[:44])
+print(dft['Address':'FoodItems'])
 
 # INDEXING USING LOC AND ILOC
 # loc and iloc allow you to select rows, columns, or single cells
@@ -52,20 +52,20 @@ capitals = pd.DataFrame(
     index = ["Palau", "Vatican City", "Nauru", "Tuvalu", "San Marino"],
     columns=['Capital', 'Population', 'Percentage'])
 
-# print(capitals)
-#
-# print(capitals.loc['Nauru', 'Population']) #takes 1 operation and is preferred method
-#
-# print(capitals['Population']['Nauru']) #chained indexing - takes 2 operations
-#
-# print(capitals.loc['Palau':'Nauru', ['Population', 'Percentage']])
-#
-# print(capitals.loc[['San Marino', 'Vatican City']])
-#
-# print(capitals.iloc[[4,1]])
-# print(capitals.iloc[[4,1], 1:])
-#
-# print(capitals.iloc[:,2])  #iloc allows you to select a column by position, which cannot be done with column-based indexing
+print(capitals)
+
+print(capitals.loc['Nauru', 'Population']) #takes 1 operation and is preferred method
+
+print(capitals['Population']['Nauru']) #chained indexing - takes 2 operations
+
+print(capitals.loc['Palau':'Nauru', ['Population', 'Percentage']])
+
+print(capitals.loc[['San Marino', 'Vatican City']])
+
+print(capitals.iloc[[4,1]])
+print(capitals.iloc[[4,1], 1:])
+
+print(capitals.iloc[:,2])  #iloc allows you to select a column by position, which cannot be done with column-based indexing
 
 ############################# FILTERING ###########################
 
